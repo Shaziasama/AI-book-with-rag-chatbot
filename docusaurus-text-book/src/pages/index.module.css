@@ -1,0 +1,95 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modules {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.moduleCard {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  height: 100%;
+}
+
+.moduleCard .card__image {
+  flex-shrink: 0;
+  height: 200px; /* Fixed height for images */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ifm-color-emphasis-200); /* Placeholder background */
+}
+
+.moduleCard .card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+.moduleCard .card__body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.moduleCard .card__footer {
+  flex-shrink: 0;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.heroImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Place behind text content */
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container, cropping if necessary */
+  object-position: center; /* Center the image */
+  filter: brightness(50%); /* Darken the image for better text readability */
+}
+
+/* Ensure text content is visible above the image */
+.heroBanner .container {
+  position: relative;
+  z-index: 1; /* Place text above the image */
+  color: white; /* Ensure text is readable on dark background */
+}
+
+.heroBanner .hero__title,
+.heroBanner .hero__subtitle {
+  color: white;
+}

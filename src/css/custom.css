@@ -1,0 +1,83 @@
+/**
+ * Any CSS rules added here will be applied to all Docusaurus pages.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #3f51b5; /* A professional blue */
+  --ifm-color-primary-dark: #303f9f;
+  --ifm-color-primary-darker: #283593;
+  --ifm-color-primary-darkest: #1a237e;
+  --ifm-color-primary-light: #6573c3;
+  --ifm-color-primary-lighter: #7986cb;
+  --ifm-color-primary-lightest: #9fa8da;
+  --ifm-background-color: #ffffff; /* Light content background */
+  --ifm-background-surface-color: #f8f8f8; /* Slightly off-white for elements */
+  --ifm-code-font-size: 90%;
+  --ifm-font-family-base: 'Roboto', sans-serif; /* Academic-friendly font */
+  --ifm-font-family-monospace: 'Fira Code', 'Cascadia Code', monospace;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability in dark mode */
+html[data-theme='dark'] {
+  --ifm-color-primary: #7986cb; /* Lighter blue for dark mode */
+  --ifm-color-primary-dark: #5c6bc0;
+  --ifm-color-primary-darker: #4f5b9d;
+  --ifm-color-primary-darkest: #3f4a86;
+  --ifm-color-primary-light: #9fa8da;
+  --ifm-color-primary-lighter: #c5cae9;
+  --ifm-color-primary-lightest: #e8eaf6;
+  --ifm-background-color: #282c34; /* Dark content background */
+  --ifm-background-surface-color: #3a3f4a; /* Slightly lighter for elements */
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar styling for academic look */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Soft shadow for navbar */
+  background-color: var(--ifm-background-color);
+}
+
+html[data-theme='dark'] .navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--ifm-background-color);
+}
+
+/* General link hover effect */
+a {
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--ifm-color-primary); /* Use primary color on hover */
+  text-decoration: none;
+}
+
+/* Custom styles for Hero section */
+.hero__title {
+  font-size: 3.5rem; /* Larger title */
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero--primary {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--ifm-background-surface-color); /* Neutral background for hero */
+  color: var(--ifm-font-color-base);
+}
+
+html[data-theme='dark'] .hero--primary {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}

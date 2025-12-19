@@ -1,0 +1,64 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureCol {
+  margin-bottom: 2rem; /* Spacing between rows of cards */
+  display: flex; /* Make the column a flex container */
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Ensure text aligns left */
+  padding: 1rem 1.2rem; /* Adjusted for more compact cards */
+  border-radius: 10px; /* Medium border-radius (8-12px) */
+  background-color: #F8FAFC;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06); /* Updated subtle shadow */
+  transition: all 0.3s ease;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  border: 1px solid transparent; /* Initial border for hover effect */
+}
+
+.cardContainer:hover {
+  transform: translateY(-2px); /* Smaller lift on hover for compactness */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1), 0 0 0 2px #38BDF8; /* Enhanced shadow and blue border/glow */
+  border-color: #38BDF8; /* Subtle blue border on hover */
+}
+
+/* Ensure headings and paragraphs inside cards adopt new styling */
+.cardContainer h3 {
+  color: #0F172A;
+  font-weight: 600;
+  margin-bottom: 0.5rem; /* Reduced margin for compactness */
+  font-size: 1.3rem;
+}
+
+.cardContainer p {
+  color: #475569;
+  line-height: 1.5; /* Adjusted line height for compactness */
+  margin-bottom: 0; /* Remove bottom margin to prevent empty space */
+  font-size: 0.95rem;
+}
+
+/* Remove .featureSvg styles entirely as cards are text-only now */
+.featureSvg {
+  display: none !important; /* Force hide if anything tries to render it */
+}
+
+.featureLink {
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Inherit color */
+  width: 100%; /* Make the link fill the column */
+  display: flex; /* Make the link a flex container to allow cardContainer to fill height */
+}
+
+.featureLink:hover {
+  text-decoration: none; /* Remove underline from link */
+}
