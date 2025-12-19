@@ -20,7 +20,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Shaziasama', // Usually your GitHub org/user name.
   projectName: 'AI-book-with-rag-chatbot', // Usually your repo name.
-  deploymentBranch: 'main', // Deploy to this branch
+  deploymentBranch: 'gh-pages', // Deploy to this branch
 
 
   onBrokenLinks: 'throw',
